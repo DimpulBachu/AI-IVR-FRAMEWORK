@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml version="2.1">
+  <menu id="mainMenu">
+    <prompt>Please choose from the following options.</prompt>
+    <choice next="balance.vxml">Check account balance</choice>
+    <choice next="support.vxml">Create a support ticket</choice>
+  </menu>
+</vxml>

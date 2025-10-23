@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml version="2.1">
+  <form id="support">
+    <block>
+      <prompt>Creating your support ticket, please wait...</prompt>
+      <submit next="http://localhost:5000/ivr/start"
+              method="post"
+              enctype="application/json"
+              namelist="supportInput"/>
+    </block>
+  </form>
+</vxml>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml version="2.1">
+  <form id="welcome">
+    <block>
+      <prompt>
+        Welcome to the AI-enabled Interactive Voice Response System.
+        Please say or press 1 for account balance, or 2 for support ticket.
+      </prompt>
+      <field name="menuOption">
+        <grammar type="application/grammar+voicexml">
+          <![CDATA[
+            [1 | one] { "balance" }
+            [2 | two] { "support" }
+          ]]>
+        </grammar>
+        <noinput>Sorry, I didn’t hear you.</noinput>
+        <nomatch>Sorry, that option isn’t valid.</nomatch>
+        <filled>
+          <if cond="menuOption == 'balance'">
+            <goto next="balance.vxml"/>
+          <elseif cond="menuOption == 'support'"/>
+            <goto next="support.vxml"/>
+          </if>
+        </filled>
+      </field>
+    </block>
+  </form>
+</vxml>
